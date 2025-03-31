@@ -35,11 +35,11 @@ const positionElement = (e) => {
 };
 
 const setCursorToHover = () => {
-  cursorSmall.style.backgroundImage = "url('/website/images/cursorselect.gif')";  // Change to the hover cursor
+  cursorSmall.style.backgroundImage = "url('/images/cursorselect.gif')";  // Change to the hover cursor
 };
 
 const setCursorToIdle = () => {
-  cursorSmall.style.backgroundImage = "url('/website/images/cursoridle.gif')";  // Change back to the default cursor
+  cursorSmall.style.backgroundImage = "url('/images/cursoridle.gif')";  // Change back to the default cursor
 };
 
 // Track mouse movement
