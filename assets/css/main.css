@@ -1,0 +1,619 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
+@import url('fontawesome-all.min.css');
+
+html {
+	overflow: auto;
+	cursor: none !important;
+}
+
+#p5-container {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Keeps it behind everything */
+	display:flex;
+	resize: both;
+	flex-grow: 1;
+}
+
+.border-overlay {
+	position: absolute;
+	display: flex;  /* Ensures image stretches fully */
+    justify-content: center;
+    align-items: center;
+	pointer-events: none; /* Prevents blocking user interactions */
+	z-index: 10;
+}
+
+.border-overlay img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Forces stretching */
+}
+
+
+
+#top {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#bottom {
+    bottom: 0;
+    left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#left {
+    top: 0;
+    left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#right {
+    top: 0;
+    right: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.content {
+	position: relative;
+	padding: 15vw; /* Match this with border image size */
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100vh;
+	background-color: #111;
+	color: white;
+	font-family: Arial, sans-serif;
+	padding-top: 5%;
+	cursor: none; 
+}
+
+
+  
+.cursor {
+	position: fixed; /* Fixes cursor to viewport, ignoring page scroll */
+	top: 0;
+	left: 0;
+	width: 100px; /* Adjust to match GIF size */
+	height: 100px;
+	background-image: url('/website/images/cursoridle.gif');
+	background-size: cover;
+	pointer-events: none; /* Ensures it doesn’t interfere with anything */
+	transform: translate(-50%, -50%); /* Centers the cursor */
+	z-index: 10000;
+  }
+
+  
+
+  /* Style the header with a background color and padding */
+  .header {
+	overflow: hidden;
+	background-color: #cdcdcd;
+	padding: 10px 5px;
+	position: fixed; /* Fixes the header at the top */
+	top: 0;
+	width: 100%;
+	z-index: 1000; /* Ensures the header is above other content */
+  }
+
+  .heading{
+	display: flex;
+	position: flex;
+  }
+
+nav ul {
+	list-style: none;
+	display: flex;
+	color:rgb(0, 0, 0);
+}
+
+nav .homeLi{
+	margin-right: auto;
+	display: block;
+}
+
+nav .Li{
+	display: none;
+}
+
+.name{
+	width: 200px;
+	padding-left: 2em;
+	height: 50px;
+	position: flex;
+	display: block;
+}
+
+
+nav a{
+	display: flex;
+	text-decoration: none;
+	color:rgb(0, 0, 0);
+	padding: 0 2em;
+	display: block;
+}
+
+#openMenu{
+	display: none;
+	width: 50px;
+	height: 50px;
+	background: none;
+	background-image: url(/website/images/menu.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: none;
+	padding: 1em;
+	margin-left: auto;
+	cursor: pointer;
+	margin-right: 3em;
+}
+
+#closeMenu{
+	display: none;
+	width: 35px;
+	height: 35px;
+	background: none;
+	background-image: url(/website/images/x.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border:none;
+	padding: 1em;
+	cursor:pointer;
+}
+
+
+	nav {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100vh;
+		width: min(10em, 75%);
+		z-index: 100;
+		background-image: url("/website/images/textureWork2.png");
+		background-repeat:inherit;
+		background-size: cover;
+		background-color: white;
+		background-position: center;
+		border-style: ridge;
+		border-color: white;
+		transition: right 300ms ease-out;
+	}
+	nav.show{
+		right: 0;
+	}
+
+	nav ul {
+		width: 100%;
+		flex-direction: column;
+		gap: 0;
+		margin-top: 5vh;
+		padding-left: 5%;
+
+	}
+
+	nav a {
+		width: 100%;
+		padding-left: 1em;
+		padding-top: 1.5em;
+		padding-right: 1em;
+		margin-right: 10rem;
+		display: block;
+		width: 100px;
+		height: 60px;
+		background-image: url(/website/images/panel3.png);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+		transition: transform 0.3s;
+	}
+	nav a:hover{
+		transform: scale(1.05);
+		cursor: none; 
+	}
+	nav .Li {
+		display: block;
+	}
+
+	#openMenu{
+		display: block;
+	}
+	#closeMenu{
+		display: block;
+		margin-left: 30%;
+		margin-top: -10px;
+		width: 45px;
+		height: 45px;
+		padding-bottom: 2em;
+	}
+
+.character-viewport {
+    width: 500px;
+    height: 400px;
+    position: relative;  /* Allows absolute positioning inside */
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Prevents overflow */
+	background-color: #c7c7c7;
+	border-style:ridge;
+	border-color: white;
+}
+
+/* .character-viewport:before{
+	content: '';
+    position: absolute;
+    top: -50px; 
+    left: -50px; 
+    right: -50px; 
+    bottom: -50px;
+    background-image: url('/website/images/panel.png');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+} */
+
+/* Both Video and GIF should be stacked exactly on top of each other */
+.characterGif,
+.characterVideo, 
+.idleVideo {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute; /* Stacks both on top of each other */
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Ensures they fully cover the viewport */
+}
+
+/* Initially hide the video */
+.characterVideo {
+    display: none;
+}
+
+.idleVideo {
+    display: none; /* Initially hide the idle video */
+}
+
+/* Dialogue Box */
+
+.option {
+    width: 100px; /* Set desired width */
+    height: 100px; /* Set desired height */
+    background-image: url('/website/images/panel.png'); /* Replace with your image path */
+    background-size: contain; /* Ensures the image covers the entire button */
+    background-position: center; /* Centers the image within the button */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border: none; /* Removes default border */
+    color: rgb(0, 0, 0); /* Text color */	
+    font-size: 16px; /* Text size */
+	font-weight: bold;
+    text-align: center; /* Centers text horizontally */
+    line-height: 100px; /* Centers text vertically if single line */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: transform 0.3s; /* Smooth hover effect */
+	background-color: transparent;
+}
+
+/* Hover effect */
+.option:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+	cursor: none; 
+}
+
+.dialogue-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 6vh;
+	padding: 1em;
+	/* gap between elements, if desired */
+	gap: 20px;
+	/* background-image: url('/website/images/panel.png');
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat; */
+	/* background-color: #242324; */
+	background-image: url("/website/images/textureWork2.png");
+	border-style: ridge;
+	border-color: white;
+	z-index: 5;
+	background-repeat:inherit;
+		background-size: cover;
+  }
+
+  @media (max-width: 480px){
+	.dialogue-container{
+	transform: scale(75%, 75%);
+	gap: 5px;
+	cursor: none !important;
+	}
+  }
+
+/* Dialogue Box – ensure it’s in normal flow */
+.dialogue-box {
+	position: absolute;
+	top: 20em;
+	background-color: rgba(3, 3, 3, 0.7);
+	max-width: 600px;
+	padding: 5px;
+	/* padding-top: -30%; */
+	border-radius: 10px;
+	border-style: outset;
+	border-color: white;
+	font-size: 1.05em;
+	text-align: center;
+	z-index: 30;
+  }
+
+/* Dialogue Options */
+.dialogue-options {
+	position: relative;
+	margin-top: 20px;
+	display: flex;
+	gap: 0px;
+}
+
+.igicon{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-image:url(/website/images/igicon.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.igicon:hover{
+	background-image:url("/website/images/igicon.gif");
+}
+
+.linkedicon{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-image:url(/website/images/linkedinicon.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.linkedicon:hover{
+	background-image:url("/website/images/linkedinicon.gif");
+}
+
+.yticon{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-image:url(/website/images/yticon.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.yticon:hover{
+	background-image: url("/website/images/yticon.gif");
+}
+.scicon{
+	display: flex;
+	width: 140px;
+	height: 120px;
+	background-image:url(/website/images/scicon.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateX(-20px);
+}
+.scicon:hover{
+	background-image: url("/website/images/scicon.gif");
+}
+
+/* For large screens: icons arranged in a row on the left side */
+.iconLinks {
+	margin-top: 15vh;
+	position: absolute;
+	top: 5vh;
+	left: 10vw;
+	/* transform: translateY(-10%); */
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-position: cover;
+	z-index: 15; /* ensure they are above the background, if needed */
+	width: 100px;
+	padding: 15px;
+	background-image: url("/website/images/textureWork2.png");
+	border-style: ridge;
+	border-color: white;
+  }
+
+  @media (max-width: 1000px){
+	.scicon{
+	transform: translateX(7px);
+	cursor: none !important;
+	}
+  }
+  
+  @media (max-width: 1000px) {
+	.iconLinks {
+	  position: relative;
+	  bottom: 10vh;
+	  left: 0;
+	  right: 0;
+	  top: -10vh;
+	  margin-top: 10vh;
+	  /* margin: 20 auto; */
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  gap: 10px;
+	  height: 100px;
+	  z-index: 15; /* ensure they remain above other elements */
+	  width: max-content;
+	  cursor: none !important;
+	}
+  }
+
+  @media (max-width: 480px) {
+	.iconLinks {
+	  transform: scale(80%, 90%);
+	  cursor: none !important;
+	}
+  }
+
+  .boombox{
+	display: flex;
+	width: 300px;
+	height: 300px;
+	background-image:url(/website/images/boombox.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor:pointer;
+	transition: transform 0.3s;
+}
+
+.boombox:hover{
+	transform:scale(1.05);
+}
+
+.radio{
+	/* padding-top: 5%; */
+	position: absolute;
+	margin-top: 8vh;
+	/* top: 2.5vh; */
+	right: 4em;
+	/* transform: translateY(-10%); */
+	display: flex;
+	flex-direction: column;
+	/* gap: 5px; */
+	z-index: 15; /* ensure they are above the background, if needed */
+	overflow:visible;
+	background-image: url("/website/images/textureWork2.png");
+	border-style: ridge;
+	border-color: white;
+	background-repeat:inherit;
+	/* background-size: cover; */
+	background-position: right;
+}
+
+
+@media (max-width: 1350px) {
+	.radio {
+	right: 2.5em;
+	cursor: none !important;
+	}
+
+}
+
+@media (max-width: 1200px) {
+	.radio {
+	  position: relative;
+	  bottom: -10vh;
+	  left: 0;
+	  right: 0;
+	  top: -5vh;
+	  margin-top: 8vh;
+	  margin: 1 auto;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  gap: 1px;
+	  z-index: 15; /* ensure they remain above other elements */
+	  cursor: none !important;
+	}
+  }
+
+  @media (max-width: 480px) {
+	.radio {
+		margin-top: 1vh;
+		transform: scale(80%, 80%);
+		cursor: none !important;
+	}
+
+}
+
+  .controls{
+	display: flex;
+	transform: translateX(1vw);
+	gap: 10px;
+  }
+
+  .control-btn {
+	width: 50px;       /* Adjust the size as needed */
+	height: 50px;      
+	cursor: pointer;   /* Changes the cursor on hover */
+	transition: transform 0.05s;
+  }
+
+  .control-btn:active{
+	transform:scale(1.15);
+  }
+
+.nowPlayingWrapper{
+	padding: 0rem 0px;
+	color: white;
+	font-size: 16;
+	width: 150px;
+	height: 100px;
+	background-image:url(/website/images/panel2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y:bottom;
+}
+
+.scroll{
+	overflow: clip;
+}
+
+.scrollTrack{
+	display: flex;
+	padding-left: 1.8rem;
+	width: max-content;
+	gap: 1.8rem;
+	animation: scrollingText 10s linear infinite;
+}
+
+@keyframes scrollingText{
+	from{
+		transform: translateX(-50%)
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+  
+html, body {
+	height: 100%;          /* Allow full viewport height */
+	width: 100%;           /* Allow full viewport width */
+	margin: 0;             /* Remove default margin */
+	overflow: auto;        /* Enable scrolling */
+	cursor: none !important; /* Hide default cursor */
+  }
+  
+  *,
+  *::before,
+  *::after {
+	cursor: none !important; /* Force the default cursor to be hidden */
+  }
