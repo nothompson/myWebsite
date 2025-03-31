@@ -97,7 +97,7 @@ body {
 	left: 0;
 	width: 100px; /* Adjust to match GIF size */
 	height: 100px;
-	background-image: url('/website/images/cursoridle.gif');
+	background-image: url('/images/cursoridle.gif');
 	background-size: cover;
 	pointer-events: none; /* Ensures it doesn’t interfere with anything */
 	transform: translate(-50%, -50%); /* Centers the cursor */
@@ -159,7 +159,7 @@ nav a{
 	width: 50px;
 	height: 50px;
 	background: none;
-	background-image: url(/website/images/menu.png);
+	background-image: url(/images/menu.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -175,7 +175,7 @@ nav a{
 	width: 35px;
 	height: 35px;
 	background: none;
-	background-image: url(/website/images/x.png);
+	background-image: url(/images/x.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -192,7 +192,7 @@ nav a{
 		height: 100vh;
 		width: min(10em, 75%);
 		z-index: 100;
-		background-image: url("/website/images/textureWork2.png");
+		background-image: url("/images/textureWork2.png");
 		background-repeat:inherit;
 		background-size: cover;
 		background-color: white;
@@ -223,7 +223,7 @@ nav a{
 		display: block;
 		width: 100px;
 		height: 60px;
-		background-image: url(/website/images/panel3.png);
+		background-image: url(/images/panel3.png);
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -304,7 +304,7 @@ nav a{
 .option {
     width: 100px; /* Set desired width */
     height: 100px; /* Set desired height */
-    background-image: url('/website/images/panel.png'); /* Replace with your image path */
+    background-image: url('/images/panel.png'); /* Replace with your image path */
     background-size: contain; /* Ensures the image covers the entire button */
     background-position: center; /* Centers the image within the button */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -340,7 +340,7 @@ nav a{
     background-attachment: fixed;
     background-repeat: no-repeat; */
 	/* background-color: #242324; */
-	background-image: url("/website/images/textureWork2.png");
+	background-image: url("/images/textureWork2.png");
 	border-style: ridge;
 	border-color: white;
 	z-index: 5;
@@ -384,49 +384,49 @@ nav a{
 	display: flex;
 	width: 100px;
 	height: 100px;
-	background-image:url(/website/images/igicon.png);
+	background-image:url(/images/igicon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 .igicon:hover{
-	background-image:url("/website/images/igicon.gif");
+	background-image:url("/images/igicon.gif");
 }
 
 .linkedicon{
 	display: flex;
 	width: 100px;
 	height: 100px;
-	background-image:url(/website/images/linkedinicon.png);
+	background-image:url(/images/linkedinicon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 .linkedicon:hover{
-	background-image:url("/website/images/linkedinicon.gif");
+	background-image:url("/images/linkedinicon.gif");
 }
 
 .yticon{
 	display: flex;
 	width: 100px;
 	height: 100px;
-	background-image:url(/website/images/yticon.png);
+	background-image:url(/images/yticon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .yticon:hover{
-	background-image: url("/website/images/yticon.gif");
+	background-image: url("/images/yticon.gif");
 }
 .scicon{
 	display: flex;
 	width: 140px;
 	height: 120px;
-	background-image:url(/website/images/scicon.png);
+	background-image:url(/images/scicon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	transform: translateX(-20px);
 }
 .scicon:hover{
-	background-image: url("/website/images/scicon.gif");
+	background-image: url("/images/scicon.gif");
 }
 
 /* For large screens: icons arranged in a row on the left side */
@@ -443,7 +443,7 @@ nav a{
 	z-index: 15; /* ensure they are above the background, if needed */
 	width: 100px;
 	padding: 15px;
-	background-image: url("/website/images/textureWork2.png");
+	background-image: url("/images/textureWork2.png");
 	border-style: ridge;
 	border-color: white;
   }
@@ -486,7 +486,7 @@ nav a{
 	display: flex;
 	width: 300px;
 	height: 300px;
-	background-image:url(/website/images/boombox.png);
+	background-image:url(/images/boombox.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -510,7 +510,7 @@ nav a{
 	/* gap: 5px; */
 	z-index: 15; /* ensure they are above the background, if needed */
 	overflow:visible;
-	background-image: url("/website/images/textureWork2.png");
+	background-image: url("/images/textureWork2.png");
 	border-style: ridge;
 	border-color: white;
 	background-repeat:inherit;
@@ -577,7 +577,7 @@ nav a{
 	font-size: 16;
 	width: 150px;
 	height: 100px;
-	background-image:url(/website/images/panel2.png);
+	background-image:url(/images/panel2.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-y:bottom;
