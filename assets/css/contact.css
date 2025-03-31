@@ -112,11 +112,11 @@
   }
   
   .contact_us .firstRow {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 30px;
     margin-left: 0px;
@@ -128,7 +128,6 @@
   }
   
   .contact_us .cardHead {
-    margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 10px;
     margin-left: 0px;
@@ -225,6 +224,7 @@
     }
   
     .contact_us .responsive-cell-block.wk-desk-7.wk-ipadp-8.wk-tab-12.wk-mobile-12 {
+        margin-top: 30px;
       padding-top: 10px;
       padding-right: 10px;
       padding-bottom: 10px;
