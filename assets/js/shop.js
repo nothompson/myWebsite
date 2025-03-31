@@ -27,7 +27,7 @@ function closeMenu(){
 const cursorSmall = document.querySelector('.cursor');
 
 // Elements to trigger the cursor change
-const hoverElements = document.querySelectorAll('a, button, .nav, .music-grid img');
+const hoverElements = document.querySelectorAll('a, button, .nav ');
 
 const positionElement = (e) => {
   cursorSmall.style.left = `${e.clientX}px`;
