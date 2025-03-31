@@ -139,8 +139,8 @@ function setup(){
 }
 
 function toggleBoombox(element) {
-    const pngImage = '/website/images/boombox.png';
-    const gifImage = "/website/images/boombox.gif";
+    const pngImage = '/images/boombox.png';
+    const gifImage = "/images/boombox.gif";
     const currentBackground = window.getComputedStyle(element).backgroundImage;
 
     if (currentBackground.includes(pngImage)) {
@@ -156,12 +156,12 @@ function toggleBoombox(element) {
 }
 
 const songs = [
-	'/website/sounds/molds.mp3',
-	'/website/sounds/bummer.mp3',
-	'/website/sounds/itsOkay.mp3',
-	'/website/sounds/snowfall.mp3',
-	'/website/sounds/squirmFrequency.mp3',
-	'/website/sounds/theMachine.mp3',
+	'/sounds/molds.mp3',
+	'/sounds/bummer.mp3',
+	'/sounds/itsOkay.mp3',
+	'/sounds/snowfall.mp3',
+	'/sounds/squirmFrequency.mp3',
+	'/sounds/theMachine.mp3',
   ];
   
   let currentSongIndex = Math.floor(Math.random() * songs.length);
@@ -300,11 +300,11 @@ const positionElement = (e) => {
 };
 
 const setCursorToHover = () => {
-  cursorSmall.style.backgroundImage = "url('/website/images/cursorselect.gif')";  // Change to the hover cursor
+  cursorSmall.style.backgroundImage = "url('/images/cursorselect.gif')";  // Change to the hover cursor
 };
 
 const setCursorToIdle = () => {
-  cursorSmall.style.backgroundImage = "url('/website/images/cursoridle.gif')";  // Change back to the default cursor
+  cursorSmall.style.backgroundImage = "url('/images/cursoridle.gif')";  // Change back to the default cursor
 };
 
 // Track mouse movement
