@@ -1,6 +1,6 @@
 .header {
 	overflow: hidden;
-	background-color: #cdcdcd6b;
+	background-color: #cdcdcd;
 	padding: 10px 5px;
 	position: fixed; /* Fixes the header at the top */
 	top: 0;
@@ -206,7 +206,7 @@ nav a{
             display: grid;
             grid-template-columns: 1fr;
             grid-gap: 16px;
-            background-color: #c7c7c7;
+            background-color: #565656;
             padding: 32px;
             border-radius: 16px;
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
@@ -223,7 +223,7 @@ nav a{
                 label{
                     display: block;
                     margin-bottom: 5px;
-                    color:rgb(212, 212, 212);
+                    color:rgb(255, 255, 255);
                 }
 
                 .form-element{
@@ -234,7 +234,7 @@ nav a{
                     width: 100%;
                     border-radius: 8px;
                     padding: 12px 16pxx;
-                    background-color:rgb(184, 184, 184);
+                    background-color:rgb(201, 201, 201);
                     transition: 0.4s;
 
                     &:focus{
@@ -260,7 +260,7 @@ nav a{
                     background: none;
 
                     padding: 12px 16px;
-                    background-color: #c7c7c7;
+                    background-color: #858585;
                     border-radius: 8px;
                     color:rgb(255, 255, 255);
                     transition: 0.4s;
