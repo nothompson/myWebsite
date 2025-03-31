@@ -165,3 +165,18 @@ nav a{
 	transform: translate(-50%, -50%); /* Centers the cursor */
 	z-index: 10000;
   }
+
+    
+html, body {
+	height: 100%;          /* Allow full viewport height */
+	width: 100%;           /* Allow full viewport width */
+	margin: 0;             /* Remove default margin */
+	overflow: auto;        /* Enable scrolling */
+	cursor: none !important; /* Hide default cursor */
+  }
+  
+  *,
+  *::before,
+  *::after {
+	cursor: none !important; /* Force the default cursor to be hidden */
+  }
