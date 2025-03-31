@@ -1,3 +1,12 @@
+.mainImg{
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    margin-top: 30px;
+}
 
 .header {
 	overflow: hidden;
@@ -170,6 +179,7 @@ nav a{
   
 html, body {
 	height: 100%;          /* Allow full viewport height */
+    background-color: #111;
 	width: 100%;           /* Allow full viewport width */
 	margin: 0;             /* Remove default margin */
 	overflow: auto;        /* Enable scrolling */
