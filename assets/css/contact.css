@@ -166,6 +166,14 @@ nav a{
 	z-index: 10000;
   }
 
+  html, body {
+    height: auto;
+    min-height: 100vh; /* Ensures it doesn't exceed viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
   *,
   *::before,
   *::after {
