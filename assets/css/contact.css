@@ -165,3 +165,9 @@ nav a{
 	transform: translate(-50%, -50%); /* Centers the cursor */
 	z-index: 10000;
   }
+
+  *,
+  *::before,
+  *::after {
+	cursor: none !important; /* Force the default cursor to be hidden */
+  }
