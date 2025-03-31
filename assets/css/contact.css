@@ -1,3 +1,11 @@
+html, body {
+    height: auto;
+    min-height: 100vh; /* Ensures it doesn't exceed viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .header {
 	overflow: hidden;
 	background-color: #cdcdcd6b;
@@ -165,14 +173,6 @@ nav a{
 	transform: translate(-50%, -50%); /* Centers the cursor */
 	z-index: 10000;
   }
-
-  html, body {
-    height: auto;
-    min-height: 100vh; /* Ensures it doesn't exceed viewport height */
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
 
   *,
   *::before,
