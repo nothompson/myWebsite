@@ -620,6 +620,7 @@ body {
 	margin: 0;             /* Remove default margin */
 	overflow: auto;        /* Enable scrolling */
 	cursor: none !important; /* Hide default cursor */
+    background-color: #111;
   }
   
   *,
