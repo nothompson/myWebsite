@@ -35,7 +35,7 @@
   }
   
   .contact_us .responsive-container-block {
-    margin-top: 3vh;
+    margin-top: 30px;
     min-height: 75px;
     height: fit-content;
     width: 100%;
@@ -52,6 +52,7 @@
   }
   
   .contact_us .responsive-container-block.bigContainer {
+    margin-top: 30px;
     padding-top: 10px;
     padding-right: 30px;
     padding-bottom: 10px;
@@ -59,6 +60,7 @@
   }
   
   .contact_us .responsive-container-block.Container {
+    margin-top: 30px;
     max-width: 1320px;
     margin-top: 50px;
     margin-right: auto;
@@ -67,7 +69,7 @@
   }
   
   .contact_us .mainImg {
-    margin-top: 3vh;
+    margin-top: 30px;
     width: 100%;
     object-fit: contain;
     height: 100%;
@@ -207,6 +209,7 @@
   
   @media (max-width: 500px) {
     .contact_us .responsive-container-block.bigContainer {
+        margin-top: 30px;
       padding-top: 10px;
       padding-right: 20px;
       padding-bottom: 10px;
@@ -214,6 +217,7 @@
     }
   
     .contact_us .responsive-container-block.Container {
+        margin-top: 30px;
       padding-top: 0px;
       padding-right: 0px;
       padding-bottom: 0px;
