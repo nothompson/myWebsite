@@ -227,6 +227,12 @@ video, img {
     height: 50vh;
 }
 
+#SlimeMold {
+    max-width: 600px;
+    width: 60vw;
+    height: 50vh;
+}
+
 #JUCE {
     max-width: 600px;
     width: 60vw;
